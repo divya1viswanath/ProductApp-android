@@ -2,6 +2,7 @@ package com.androapp.productappmzc;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -49,6 +50,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
 
+    }
+    public Cursor searchData(String Pcod)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        String query="select * from "+TableName+
+                " where " +Col2+ "='"+Pcod+"'";
+        Cursor c=db.rawQuery(query,null);
+        return c;
     }
 
 }

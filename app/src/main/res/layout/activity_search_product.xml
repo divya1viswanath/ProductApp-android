@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:id="@+id/pr"/>
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
